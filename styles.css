@@ -106,8 +106,33 @@ h2 {
   color: transparent;
 }
 
-span {
-  font-size: 1.2rem;
+a {
+  font-size: small;
+}
+
+.top {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.how-to-btn {
+  border-radius: 100%;
+  padding: 4px 7px;
+  height: fit-content;
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
+  font-family: font;
+  font-size: large;
+}
+
+.how-to {
+  display: none;
+  border-top: 7px solid #74fd4a;
+  border-radius: 10px;
+  padding: 7px;
+  width: 50%;
+  font-size: medium;
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
 }
 
 .container {
@@ -213,10 +238,19 @@ footer {
 
 /* Media queries */
 @media (max-width: 768px) {
-
   #level-title {
-    font-size: 1.8rem; /* Smaller title font for mobile */
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .top {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
     text-align: center;
   }
 

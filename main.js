@@ -135,3 +135,7 @@ function startOver() {
     gamePattern = []; // Clear the game pattern
     started = false; // Reset the started flag
 }
+
+$("button").click(function() {
+    $(".how-to").slideToggle();
+  });
