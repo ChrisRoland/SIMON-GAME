@@ -51,6 +51,18 @@ $(document).keypress(function() {
     }
 });
 
+$(".play-click").click(function() {
+    
+    if (!started) {
+        $(".simon-btn").addClass("clicked");
+        setTimeout(function() {
+            $(".simon-btn").removeClass("clicked");
+        }, 100);
+        nextSequence();
+        started = true;
+    }
+});
+
 // Detect when any of the buttons are clicked
 $(".btn").click(function() {
     var userChosenColor = $(this).attr("id");
@@ -113,6 +125,7 @@ function playSound(name) {
 function animatePress(currentColor) {
     $("#" + currentColor).addClass("pressed");
     setTimeout(function() {
+        $("simon-btn").removeClass("clicked");
         $("#" + currentColor).removeClass("pressed");
     }, 100);
 }

@@ -62,7 +62,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  min-height: 100vh;
   background-image: url("img/BG.png");
   background-position: center;
   background-size: cover;
@@ -71,8 +71,7 @@ body {
   font-family: font, cursive;
   font-size: 1.6rem;
   font-weight: 100;
-  color: #bbc0eb;
-  text-shadow: 2px 2px #0b317d;
+  /* text-shadow: 2px 2px #0b317d; */
 }
 
 body::before {
@@ -82,12 +81,29 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(181, 194, 178, 0.7);  /* Adjust the last value (0.7) for transparency */
+  background-color: rgba(
+    181,
+    194,
+    178,
+    0.7
+  ); /* Adjust the last value (0.7) for transparency */
   z-index: -1;
 }
 
-#level-title {
-  margin: 5%;
+h1 {
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
+  text-shadow: 2px 2px #0b317d;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
+  text-shadow: 2px 2px #0b317d;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 span {
@@ -139,19 +155,30 @@ span {
 }
 
 .simon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(25, 25, 25);
   border-radius: 100%;
   box-shadow: 0 0 50px black;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   position: absolute;
   top: 13%;
   right: 0;
   bottom: 0;
-  left: 13%;
+  left: 10%;
   margin: auto;
-  text-align: center;
+  font-size: medium;
   z-index: 10;
+}
+
+p.play-click {
+  color: white;
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .play-click {
@@ -166,4 +193,64 @@ span {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.clicked {
+  color: green;
+  box-shadow: none;
+  background-color: grey;
+}
+
+footer {
+  margin: 5%;
+  font-size: small;
+  background: linear-gradient(200deg, #ff2525, #fffb7d, #74fd4a);
+  text-shadow: 2px 2px #0b317d;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+
+  #level-title {
+    font-size: 1.8rem; /* Smaller title font for mobile */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .container {
+    position: relative;
+    width: 300px; /* Adjust based on your needs */
+    height: 300px;
+    right: 0.8rem;
+  }
+
+  .simon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 25, 25);
+    border-radius: 100%;
+    box-shadow: 0 0 50px black;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 7%;
+    margin: auto;
+    font-size: medium;
+    z-index: 10;
+  }
+
+  .btn {
+    border: 3px solid black;
+  }
+
+  footer {
+    font-size: medium;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -12,7 +13,9 @@
   </head>
 
   <body>
-    <h1 id="level-title">Press A Key to Start</h1>
+    <h1>Simon Game</h1>
+    
+    <h2 id="level-title">Press Any Key or Click Start</h2>
     <div class="container">
       <div class="row">
         <div type="button" id="green" class="btn green"></div>
@@ -21,7 +24,7 @@
       </div>
 
       <div class="simon-btn play-click">
-        <p class="play-click">SIMON <br> <span>Game</span></p>
+        <p class="play-click">Start</p>
       </div>
 
       <div class="row">
@@ -29,6 +32,11 @@
         <div type="button" id="blue" class="btn blue"></div>
       </div>
     </div>
+
+
+    <footer>
+      Chris's Simon Game &copy; 2024
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="main.js"></script>
