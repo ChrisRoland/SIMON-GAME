@@ -139,3 +139,14 @@ function startOver() {
 $("button").click(function() {
     $(".how-to").slideToggle();
   });
+
+
+// Get & Store Date
+var today = new Date();
+today = today.getFullYear();
+
+// Check Date
+console.log(today);
+
+// Display Date
+$('.year').text(today);
