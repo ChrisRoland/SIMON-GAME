@@ -227,6 +227,10 @@ footer {
     z-index: 10;
   }
 
+  .how-to {
+    width: 75%;
+  }
+
   .btn {
     border: 3px solid black;
   }
