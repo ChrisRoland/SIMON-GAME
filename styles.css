@@ -18,7 +18,6 @@ body {
   font-family: font, cursive;
   font-size: 1.6rem;
   font-weight: 100;
-  /* text-shadow: 2px 2px #0b317d; */
 }
 
 body::before {
@@ -203,7 +202,7 @@ footer {
 
   .container {
     position: relative;
-    width: 300px; /* Adjust based on your needs */
+    width: 300px;
     height: 300px;
     right: 0.8rem;
   }
